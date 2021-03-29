@@ -1,11 +1,23 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  
+  if (license === 'MIT') {
+    return '[here](https://opensource.org/licenses/MIT)'
+  } else if (license === 'Apache') {
+    return '[here](https://opensource.org/licenses/Apache-2.0)'
+  } else if (license === 'Eclipse') {
+    return '[here](https://opensource.org/licenses/EPL-1.0)'
+  } else if (license === 'BSD') {
+    return '[here](https://opensource.org/licenses/BSD-3-Clause)'
+  } else if (license === 'Mozilla') {
+    return '[here](https://opensource.org/licenses/MPL-2.0)'
+  }
 }
 
 // TODO: Create a function that returns the license section of README

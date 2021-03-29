@@ -20,7 +20,7 @@ inquirer
             type: 'list',
             name: 'licenses',
             message: 'What license did you use, if any?',
-            choices: ['MIT', 'Apache', 'GPL', 'BSD 3-clause', 'Mozilla Public License', 'None']
+            choices: ['MIT', 'Apache', 'Eclipse', 'BSD', 'Mozilla', 'None']
         },
         {
             type: 'input',
