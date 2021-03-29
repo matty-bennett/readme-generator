@@ -1,8 +1,9 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
-const questions = [];
+const promptUser = () => {
 inquirer
     .prompt([
         {
@@ -32,16 +33,22 @@ inquirer
             message: 'What is your e-mail address?'
         }
     ]);
-
+};
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+promptUser().then(projectData => {
+    const projectReadMe = generateMarkdown(projectData);
     
-    fs.writeFile()
-
+    fs.writeFile('projectREADME.md', projectReadMe, err => {
+        if (err) {
+            console.log(err);
+        } 
+        console.log('Success! Checkout projectREADME.md for your newly populated file.');
+    })
+})
 
 
 // TODO: Create a function to initialize app
-function init() {}
+
 
 // Function call to initialize app
-init();
+
