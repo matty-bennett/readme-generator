@@ -5,7 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const promptUser = () => {
 inquirer
-    .prompt([
+    .prompt([ // add needed questions
         {
             type: 'input',
             name: 'title',
@@ -20,7 +20,7 @@ inquirer
             type: 'list',
             name: 'licenses',
             message: 'What license did you use, if any?',
-            choices: ['MIT', 'Apache', 'GPL', 'BSD 3-clause', 'Mozilla Public License']
+            choices: ['MIT', 'Apache', 'GPL', 'BSD 3-clause', 'Mozilla Public License', 'None']
         },
         {
             type: 'input',
