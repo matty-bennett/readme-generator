@@ -4,8 +4,8 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const promptUser = () => {
-inquirer
-    .prompt([ // add needed questions
+return inquirer
+    .prompt([ 
         {
             type: 'input',
             name: 'title',
@@ -18,20 +18,41 @@ inquirer
         },
         {
             type: 'list',
-            name: 'licenses',
+            name: 'license',
             message: 'What license did you use, if any?',
             choices: ['MIT', 'Apache', 'Eclipse', 'BSD', 'Mozilla', 'None']
         },
         {
             type: 'input',
-            name: 'github',
-            message: 'What is your Github username?'
+            name: 'installation',
+            message: 'Provide the steps required to install your project:'
         },
         {
             type: 'input',
-            name: 'email',
-            message: 'What is your e-mail address?'
+            name: 'usage',
+            message: 'Provide instructions for how to use your project:'
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'If you would like others to contribute to your project, provide guidelines on how to do so:'
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'If you wrote tests for your project, explain how to use them here:'
+        },
+        {
+            type: 'input',
+            name: 'contact',
+            message: 'If anyone has questions relating to your project, provide an email address for them to contact you:'
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'and your Github username:'
         }
+        
     ]);
 };
 // TODO: Create a function to write README file
